@@ -11,7 +11,7 @@ class CarouselItemsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index() //Read
     {
         return CarouselItems::all();
     }
@@ -20,7 +20,7 @@ class CarouselItemsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request) //Create
     {
         //
     }
@@ -28,9 +28,9 @@ class CarouselItemsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id) //Read
     {
-        //
+        return CarouselItems::findOrFail($id);
     }
 
 
@@ -38,7 +38,7 @@ class CarouselItemsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id) //Update
     {
         //
     }
@@ -46,7 +46,7 @@ class CarouselItemsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id) //Delete
     {
         //
     }
