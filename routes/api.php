@@ -4,6 +4,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CarouselItemsController;
+use App\Http\Controllers\Api\UserController;
+use Illuminate\Foundation\Auth\User;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,3 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/carousel', [CarouselItemsController::class, 'index']);
 Route::get('/carousel/{id}', [CarouselItemsController::class, 'show']);
+Route::delete('/carousel/{id}', [CarouselItemsController::class, 'destroy']);
+// Route::get('/user', [UserController::class, 'index']);
+// Route::get('/user/{id}', [UserItemsController::class, 'show']);
